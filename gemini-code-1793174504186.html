@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project - BIM Nusantara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F4F1EA; color: #232321; }
+    .font-serif-title { font-family: 'Playfair Display', serif; }
+    .sidebar-bg {
+      background: linear-gradient(180deg, #252620 0%, #252620 55%, rgba(28,29,24,0.88) 75%, rgba(22,23,19,0.95) 100%),
+                  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80') bottom center / cover no-repeat;
+    }
+    .nav-active {
+      background: linear-gradient(90deg, #6E5831 0%, #836A3D 100%);
+      border-left: 4px solid #D9AB55;
+      color: #FFFFFF;
+    }
+    .hero-banner {
+      background: linear-gradient(90deg, rgba(124,113,97,0.92) 0%, rgba(105,94,78,0.72) 48%, rgba(24,22,18,0.65) 100%),
+                  url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80') center / cover no-repeat;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex">
+
+  <!-- SIDEBAR -->
+  <aside class="w-64 sidebar-bg text-stone-300 flex flex-col justify-between shrink-0 min-h-screen select-none">
+    <div>
+      <div class="px-6 py-6 flex items-center gap-3 border-b border-white/10">
+        <div class="w-10 h-10 rounded bg-[#332B1E] border border-[#C69C49]/50 flex items-center justify-center text-[#D8AE5E]">
+          <i data-lucide="building-2" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <div class="text-white font-bold tracking-wider text-sm">BIM NUSANTARA</div>
+          <div class="text-[9px] tracking-[0.22em] text-stone-400">LEARN • MODEL • BUILD</div>
+        </div>
+      </div>
+      <nav class="mt-5 px-3 space-y-1.5 text-sm">
+        <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="home" class="w-4 h-4"></i> Dashboard</a>
+        <a href="belajar.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="book-open" class="w-4 h-4"></i> Belajar</a>
+        <a href="bim-lab.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="box" class="w-4 h-4"></i> BIM Lab</a>
+        <a href="bim-studio.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="monitor" class="w-4 h-4"></i> BIM Studio</a>
+        <a href="project.html" class="nav-active flex items-center gap-3 px-4 py-3 rounded-lg font-medium"><i data-lucide="folder" class="w-4 h-4"></i> Project</a>
+        <a href="kompetensi.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="bar-chart-3" class="w-4 h-4"></i> Kompetensi</a>
+        <a href="profil.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="award" class="w-4 h-4"></i> Profil & Sertifikat</a>
+      </nav>
+    </div>
+    <div class="p-6">
+      <p class="font-serif-title text-white/90 text-base leading-snug">Membangun<br>Kompetensi BIM<br>untuk Indonesia<br>yang Lebih Baik</p>
+      <div class="w-8 h-0.5 bg-[#D4A64E] mt-3"></div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="flex-1 p-7 overflow-y-auto">
+    <header class="flex items-center justify-between mb-5">
+      <h1 class="text-2xl font-bold text-stone-900">Project</h1>
+      <div class="flex items-center gap-3">
+        <div class="flex items-center bg-white border border-stone-200 rounded-xl px-3.5 py-2 w-72 shadow-sm">
+          <i data-lucide="search" class="w-4 h-4 text-stone-400 mr-2"></i>
+          <input type="text" placeholder="Cari materi, project, atau topik..." class="text-xs w-full outline-none bg-transparent" />
+          <span class="text-[10px] bg-stone-100 text-stone-500 px-1.5 py-0.5 rounded border">Ctrl K</span>
+        </div>
+        <button class="flex items-center gap-2 bg-[#EFECE4] border border-stone-300/70 rounded-xl px-3.5 py-2 text-xs font-medium text-stone-700">
+          PT. Arsitek Muda Indonesia ▾
+        </button>
+        <div class="flex items-center gap-2.5 pl-1">
+          <div class="w-9 h-9 rounded-full bg-[#2C2D26] text-white flex items-center justify-center text-xs font-bold">AD</div>
+          <div><div class="text-xs font-bold text-stone-800">Andi Dwiputra</div><div class="text-[11px] text-stone-500">Peserta</div></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="hero-banner rounded-2xl p-8 text-white mb-5 flex justify-between items-end">
+      <div>
+        <div class="text-[11px] tracking-[0.2em] uppercase text-[#F4D38B] font-semibold mb-1">KELOLA PROJECT, BANGUN PORTOFOLIO</div>
+        <h2 class="font-serif-title text-4xl font-semibold">Project</h2>
+        <p class="text-xs text-stone-100/90 mt-1">Kelola simulasi proyek, submission, review, dan issue.</p>
+      </div>
+      <div class="text-right">
+        <p class="font-serif-title italic text-sm">"Dari pembelajaran<br>menuju karya nyata."</p>
+        <div class="w-8 h-0.5 bg-[#D4A64E] mt-2 ml-auto"></div>
+      </div>
+    </section>
+
+    <!-- Tabs Bar -->
+    <div class="flex items-center justify-between bg-[#FAF8F4] border border-stone-200 rounded-xl px-4 py-2.5 mb-5 text-xs">
+      <div class="flex items-center gap-6">
+        <span class="font-bold text-[#7A591E] border-b-2 border-[#7A591E] pb-1">📁 Proyek Aktif</span>
+        <span class="text-stone-600">📋 Tahap Project</span>
+        <span class="text-stone-600">📄 Tugas & Submission</span>
+        <span class="text-stone-600">👤 Review</span>
+        <span class="text-stone-600">⚠ Issue</span>
+        <span class="text-stone-600">🏆 Final Score</span>
+      </div>
+      <button class="bg-[#6B532B] text-white font-semibold px-4 py-2 rounded-lg">+ Buat Project Baru</button>
+    </div>
+
+    <!-- Main Split -->
+    <section class="grid grid-cols-12 gap-5">
+      <!-- Left: Daftar Project Aktif -->
+      <div class="col-span-6 space-y-4">
+        <div class="bg-[#FAF8F4] border-2 border-[#C7A35B] rounded-2xl p-4 flex gap-4">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" class="w-36 h-32 rounded-xl object-cover" />
+          <div class="flex-1">
+            <div class="flex justify-between items-start">
+              <h3 class="font-serif-title font-bold text-base text-stone-900">Rumah Tinggal 2 Lantai</h3>
+              <span class="bg-[#F5EBD6] text-[#8A6729] text-[10px] font-bold px-2.5 py-1 rounded-full">● Under Review</span>
+            </div>
+            <div class="flex gap-2 my-1.5 text-[10px]">
+              <span class="bg-stone-200 px-2 py-0.5 rounded">Residential</span>
+              <span class="bg-blue-50 text-blue-700 px-2 py-0.5 rounded font-semibold">R Revit</span>
+            </div>
+            <p class="text-[11px] text-stone-600">Pemodelan arsitektur lengkap rumah tinggal 2 lantai beserta koordinasi struktur dan MEP sederhana.</p>
+            <div class="flex items-center gap-2 mt-2">
+              <div class="flex-1 h-2 bg-stone-200 rounded-full overflow-hidden"><div class="w-[72%] h-full bg-[#A87F32]"></div></div>
+              <span class="text-xs font-bold">72%</span>
+            </div>
+            <div class="flex justify-between text-[11px] text-stone-500 mt-2">
+              <span>📅 Deadline: <b class="text-red-700">28 Apr 2024</b></span>
+              <span>📄 <b>12 / 18</b> tugas selesai</span>
+              <span>👥 Tim (4)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#FAF8F4] border border-stone-200 rounded-2xl p-4 flex gap-4">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=400&q=80" class="w-36 h-32 rounded-xl object-cover" />
+          <div class="flex-1">
+            <div class="flex justify-between items-start">
+              <h3 class="font-serif-title font-bold text-base text-stone-900">Gedung Kantor 4 Lantai</h3>
+              <span class="bg-red-100 text-red-700 text-[10px] font-bold px-2.5 py-1 rounded-full">● Revision Required</span>
+            </div>
+            <div class="flex gap-2 my-1.5 text-[10px]">
+              <span class="bg-stone-200 px-2 py-0.5 rounded">Commercial</span>
+              <span class="bg-blue-50 text-blue-700 px-2 py-0.5 rounded font-semibold">R Revit</span>
+            </div>
+            <p class="text-[11px] text-stone-600">Pemodelan gedung perkantoran 4 lantai dengan BIM koordinasi multi-disiplin.</p>
+            <div class="flex items-center gap-2 mt-2">
+              <div class="flex-1 h-2 bg-stone-200 rounded-full overflow-hidden"><div class="w-[45%] h-full bg-[#A87F32]"></div></div>
+              <span class="text-xs font-bold">45%</span>
+            </div>
+            <div class="flex justify-between text-[11px] text-stone-500 mt-2">
+              <span>📅 Deadline: <b class="text-red-700">15 Mei 2024</b></span>
+              <span>📄 <b>8 / 18</b> tugas selesai</span>
+              <span>👥 Tim (5)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#FAF8F4] border border-stone-200 rounded-2xl p-4 flex gap-4">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80" class="w-36 h-32 rounded-xl object-cover" />
+          <div class="flex-1">
+            <div class="flex justify-between items-start">
+              <h3 class="font-serif-title font-bold text-base text-stone-900">Mixed-Use Building – Sudirman</h3>
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-1 rounded-full">✓ Approved</span>
+            </div>
+            <div class="flex gap-2 my-1.5 text-[10px]">
+              <span class="bg-stone-200 px-2 py-0.5 rounded">Mixed-Use</span>
+              <span class="bg-blue-50 text-blue-700 px-2 py-0.5 rounded font-semibold">R Revit</span>
+            </div>
+            <p class="text-[11px] text-stone-600">Pemodelan kompleks bangunan mixed-use dengan tower, podium, dan area komersial.</p>
+            <div class="flex items-center gap-2 mt-2">
+              <div class="flex-1 h-2 bg-[#A87F32] rounded-full"></div>
+              <span class="text-xs font-bold">100%</span>
+            </div>
+            <div class="flex justify-between text-[11px] text-stone-500 mt-2">
+              <span>📅 Deadline: <b class="text-red-700">10 Mei 2024</b></span>
+              <span>📄 <b>20 / 20</b> tugas selesai</span>
+              <span>👥 Tim (6)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Detail Rumah Tinggal 2 Lantai -->
+      <div class="col-span-6 bg-[#FAF8F4] border border-stone-200 rounded-2xl p-5 space-y-4">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="font-serif-title text-xl font-bold text-stone-900">Rumah Tinggal 2 Lantai</h3>
+            <div class="text-[11px] text-stone-500 mt-0.5">Residential • Revit • Dibuat 20 Mar 2024 | ID: <b>PRJ-001</b></div>
+          </div>
+          <span class="bg-[#F5EBD6] text-[#8A6729] text-xs font-bold px-3 py-1 rounded-full">● Under Review</span>
+        </div>
+
+        <div class="grid grid-cols-4 gap-3 bg-white p-3.5 rounded-xl border border-stone-200">
+          <div><div class="text-[11px] text-stone-500">Progress Project</div><div class="text-xl font-bold">72%</div></div>
+          <div><div class="text-sm font-bold">12</div><div class="text-[10px] text-stone-500">Tugas Selesai</div></div>
+          <div><div class="text-sm font-bold">6</div><div class="text-[10px] text-stone-500">Tugas Tersisa</div></div>
+          <div><div class="text-sm font-bold text-red-700">28 Apr 2024</div><div class="text-[10px] text-stone-500">Deadline Project</div></div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white p-4 rounded-xl border border-stone-200 space-y-2.5 text-xs">
+            <div class="font-bold text-stone-900">Tahap Project</div>
+            <div class="flex justify-between"><span>✓ Konsep & Studi Awal</span><b class="text-emerald-700">100%</b></div>
+            <div class="flex justify-between"><span>✓ Pemodelan Arsitektur</span><b class="text-emerald-700">100%</b></div>
+            <div class="flex justify-between"><span>◉ Koordinasi Struktur</span><b class="text-[#8A6729]">70%</b></div>
+            <div class="flex justify-between text-stone-400"><span>○ Koordinasi MEP</span><span>0%</span></div>
+            <div class="flex justify-between text-stone-400"><span>○ Finalisasi & Submission</span><span>0%</span></div>
+          </div>
+
+          <div class="bg-white p-4 rounded-xl border border-stone-200">
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-xs font-bold">Preview Model 3D</span>
+              <a href="bim-studio.html" class="text-[10px] bg-[#F5EBD6] text-[#7A591E] px-2 py-0.5 rounded font-semibold">Buka di BIM Studio →</a>
+            </div>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" class="w-full h-32 rounded-lg object-cover" />
+          </div>
+        </div>
+
+        <!-- Ringkasan Issue & Review -->
+        <div class="grid grid-cols-2 gap-4 text-xs">
+          <div class="bg-white p-4 rounded-xl border border-stone-200 space-y-2">
+            <div class="font-bold">Ringkasan Issue (3 Terbuka)</div>
+            <div class="text-[11px]">⚠️ <b>Clash struktur dengan arsitektur pada lantai 2</b><br><span class="text-red-700">High • Struktur</span></div>
+            <div class="text-[11px]">⚠️ <b>Dimensi pintu tidak sesuai standar</b><br><span class="text-amber-700">Medium • Arsitektur</span></div>
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-stone-200 space-y-2">
+            <div class="font-bold">Review Terbaru</div>
+            <div class="text-[11px]"><b>Rizky Pratama (Trainer):</b> Model arsitektur sudah sangat baik. Perlu penyesuaian pada detail tangga dan railing sesuai standar SNI.</div>
+            <div class="text-[11px]"><b>Siti Rahmawati (Trainer):</b> Koordinasi struktur sudah bagus, namun perlu pengecekan ulang pada kolom lantai 2.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

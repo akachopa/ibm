@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard BIM - BIM Nusantara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F4F1EA; color: #232321; }
+    .font-serif-title { font-family: 'Playfair Display', serif; }
+    .sidebar-bg {
+      background: linear-gradient(180deg, #252620 0%, #252620 55%, rgba(28,29,24,0.88) 75%, rgba(22,23,19,0.95) 100%),
+                  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80') bottom center / cover no-repeat;
+    }
+    .nav-active {
+      background: linear-gradient(90deg, #6E5831 0%, #836A3D 100%);
+      border-left: 4px solid #D9AB55;
+      color: #FFFFFF;
+    }
+    .hero-banner {
+      background: linear-gradient(90deg, rgba(124,113,97,0.92) 0%, rgba(105,94,78,0.72) 48%, rgba(30,28,24,0.45) 100%),
+                  url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80') center / cover no-repeat;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex">
+
+  <!-- SIDEBAR -->
+  <aside class="w-64 sidebar-bg text-stone-300 flex flex-col justify-between shrink-0 min-h-screen select-none">
+    <div>
+      <!-- Logo -->
+      <div class="px-6 py-6 flex items-center gap-3 border-b border-white/10">
+        <div class="w-10 h-10 rounded bg-[#332B1E] border border-[#C69C49]/50 flex items-center justify-center text-[#D8AE5E]">
+          <i data-lucide="building-2" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <div class="text-white font-bold tracking-wider text-sm">BIM NUSANTARA</div>
+          <div class="text-[9px] tracking-[0.22em] text-stone-400">LEARN • MODEL • BUILD</div>
+        </div>
+      </div>
+
+      <!-- Menu -->
+      <nav class="mt-5 px-3 space-y-1.5 text-sm">
+        <a href="dashboard.html" class="nav-active flex items-center gap-3 px-4 py-3 rounded-lg font-medium">
+          <i data-lucide="home" class="w-4 h-4"></i> Dashboard
+        </a>
+        <a href="belajar.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition">
+          <i data-lucide="book-open" class="w-4 h-4"></i> Belajar
+        </a>
+        <a href="bim-lab.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition">
+          <i data-lucide="box" class="w-4 h-4"></i> BIM Lab
+        </a>
+        <a href="bim-studio.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition">
+          <i data-lucide="monitor" class="w-4 h-4"></i> BIM Studio
+        </a>
+        <a href="project.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition">
+          <i data-lucide="folder" class="w-4 h-4"></i> Project
+        </a>
+        <a href="kompetensi.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition">
+          <i data-lucide="bar-chart-3" class="w-4 h-4"></i> Kompetensi
+        </a>
+        <a href="profil.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition">
+          <i data-lucide="award" class="w-4 h-4"></i> Profil & Sertifikat
+        </a>
+      </nav>
+    </div>
+
+    <!-- Bottom Quote -->
+    <div class="p-6">
+      <p class="font-serif-title text-white/90 text-base leading-snug">
+        Membangun<br>Kompetensi BIM<br>untuk Indonesia<br>yang Lebih Baik
+      </p>
+      <div class="w-8 h-0.5 bg-[#D4A64E] mt-3"></div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1 p-7 overflow-y-auto">
+    <!-- Top Header -->
+    <header class="flex items-center justify-between mb-6">
+      <div>
+        <h1 class="text-2xl font-bold text-stone-900">Dashboard BIM</h1>
+        <p class="text-xs text-stone-500 mt-0.5">Pantau progres belajar, project, dan capaian kompetensi Anda</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="flex items-center bg-white border border-stone-200 rounded-xl px-3.5 py-2 w-72 shadow-sm">
+          <i data-lucide="search" class="w-4 h-4 text-stone-400 mr-2"></i>
+          <input type="text" placeholder="Cari materi, project, atau topik..." class="text-xs w-full outline-none bg-transparent text-stone-700" />
+          <span class="text-[10px] bg-stone-100 text-stone-500 px-1.5 py-0.5 rounded border border-stone-200">Ctrl K</span>
+        </div>
+        <button class="flex items-center gap-2 bg-[#EFECE4] border border-stone-300/70 rounded-xl px-3.5 py-2 text-xs font-medium text-stone-700">
+          <i data-lucide="building" class="w-4 h-4 text-stone-600"></i>
+          PT. Arsitek Muda Indonesia
+          <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+        </button>
+        <button class="relative p-2 rounded-xl bg-white border border-stone-200">
+          <i data-lucide="bell" class="w-4 h-4 text-stone-700"></i>
+          <span class="w-2 h-2 rounded-full bg-red-500 absolute top-1.5 right-1.5"></span>
+        </button>
+        <div class="flex items-center gap-2.5 pl-1">
+          <div class="w-9 h-9 rounded-full bg-[#2C2D26] text-white flex items-center justify-center text-xs font-bold">AD</div>
+          <div class="text-left">
+            <div class="text-xs font-bold text-stone-800 flex items-center gap-1">Andi Dwiputra <i data-lucide="chevron-down" class="w-3 h-3"></i></div>
+            <div class="text-[11px] text-stone-500">Peserta</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner rounded-2xl p-8 text-white relative overflow-hidden shadow-sm mb-6 flex justify-between items-end min-h-[210px]">
+      <div class="max-w-xl">
+        <div class="text-[11px] tracking-[0.2em] uppercase text-[#F4D38B] font-semibold mb-2">BELAJAR BIM, BANGUN MASA DEPAN</div>
+        <h2 class="font-serif-title text-4xl font-semibold leading-tight mb-2">Dari Pengetahuan<br>Menuju Karya Nyata</h2>
+        <p class="text-xs text-stone-100/90 leading-relaxed mb-4 max-w-md">
+          Kembangkan kompetensi BIM Anda melalui pelatihan terstruktur, praktik langsung, dan project nyata di industri konstruksi.
+        </p>
+        <a href="belajar.html" class="inline-flex items-center gap-2 bg-[#C89D4C] hover:bg-[#b78d3f] text-stone-950 font-semibold text-xs px-4 py-2.5 rounded-lg transition">
+          Lanjutkan Belajar <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+      <div class="text-right max-w-xs">
+        <p class="font-serif-title text-sm italic text-white/95">"Bangunan yang lebih baik<br>dimulai dari talenta yang lebih baik."</p>
+        <div class="w-8 h-0.5 bg-[#D4A64E] mt-2 ml-auto"></div>
+      </div>
+    </section>
+
+    <!-- 4 KPI Cards -->
+    <section class="grid grid-cols-4 gap-4 mb-6">
+      <div class="bg-[#FAF8F4] border border-stone-200/80 rounded-2xl p-4">
+        <div class="flex items-start justify-between">
+          <div class="flex gap-3">
+            <div class="w-11 h-11 rounded-xl bg-[#EFE9DC] text-[#7A5D29] flex items-center justify-center">
+              <i data-lucide="book-open" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs text-stone-600 font-medium">Progress Pelatihan</div>
+              <div class="text-3xl font-bold text-stone-900 mt-0.5">62%</div>
+            </div>
+          </div>
+          <span class="text-[11px] bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded-full mt-4">↑ 12%</span>
+        </div>
+        <div class="w-full h-2 bg-stone-200 rounded-full mt-3 overflow-hidden">
+          <div class="w-[62%] h-full bg-[#A87F32] rounded-full"></div>
+        </div>
+        <div class="text-[11px] text-stone-500 mt-2">12 dari 20 modul selesai</div>
+      </div>
+
+      <div class="bg-[#FAF8F4] border border-stone-200/80 rounded-2xl p-4">
+        <div class="flex items-start justify-between">
+          <div class="flex gap-3">
+            <div class="w-11 h-11 rounded-xl bg-[#EAE8DE] text-[#5B6049] flex items-center justify-center">
+              <i data-lucide="folder" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs text-stone-600 font-medium">Project Aktif</div>
+              <div class="text-3xl font-bold text-stone-900 mt-0.5">3</div>
+            </div>
+          </div>
+          <span class="text-[11px] bg-blue-100 text-blue-800 font-medium px-2.5 py-1 rounded-lg mt-3">Sedang dikerjakan</span>
+        </div>
+        <div class="text-[11px] text-stone-500 mt-6">1 project mendekati deadline</div>
+      </div>
+
+      <div class="bg-[#FAF8F4] border border-stone-200/80 rounded-2xl p-4">
+        <div class="flex items-start justify-between">
+          <div class="flex gap-3">
+            <div class="w-11 h-11 rounded-xl bg-[#EAE8DE] text-[#6E5C38] flex items-center justify-center">
+              <i data-lucide="bar-chart-2" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs text-stone-600 font-medium">Nilai Rata-rata</div>
+              <div class="text-3xl font-bold text-stone-900 mt-0.5">88</div>
+            </div>
+          </div>
+          <span class="text-[11px] bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded-full mt-4">↑ 6%</span>
+        </div>
+        <div class="text-[11px] text-stone-500 mt-6">Dari 8 penilaian tugas</div>
+      </div>
+
+      <div class="bg-[#FAF8F4] border border-stone-200/80 rounded-2xl p-4">
+        <div class="flex items-start justify-between">
+          <div class="flex gap-3">
+            <div class="w-11 h-11 rounded-xl bg-[#EFE9DC] text-[#7A5D29] flex items-center justify-center">
+              <i data-lucide="award" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs text-stone-600 font-medium">Sertifikat</div>
+              <div class="text-3xl font-bold text-stone-900 mt-0.5">2</div>
+            </div>
+          </div>
+          <span class="text-[11px] bg-[#F3E9D2] text-[#8B6827] font-medium px-2.5 py-1 rounded-lg mt-3">1 dalam proses</span>
+        </div>
+        <div class="text-[11px] text-stone-500 mt-6">Dari 6 jalur kompetensi</div>
+      </div>
+    </section>
+
+    <!-- Middle 3 Columns -->
+    <section class="grid grid-cols-12 gap-5 mb-6">
+      <!-- Jalur Pembelajaran Anda -->
+      <div class="col-span-4 bg-[#FAF8F4] border border-stone-200/80 rounded-2xl p-5">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-serif-title font-bold text-base text-stone-900">Jalur Pembelajaran Anda</h3>
+          <a href="belajar.html" class="text-xs text-[#8A6729] font-medium flex items-center gap-1">Lihat Semua <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+        </div>
+        <div class="space-y-5 relative">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-700 text-white flex items-center justify-center mt-0.5 shrink-0">
+                <i data-lucide="check" class="w-3 h-3"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-stone-900">Dasar-dasar BIM</div>
+                <div class="text-[11px] text-emerald-700 font-medium mt-0.5">Selesai • <span class="text-stone-500 font-normal">8/8 materi</span></div>
+              </div>
+            </div>
+            <div class="text-right w-20">
+              <div class="text-[11px] font-bold text-emerald-800">100%</div>
+              <div class="w-full h-1.5 bg-emerald-700 rounded-full mt-1"></div>
+            </div>
+          </div>
+
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full border-2 border-[#8A6729] flex items-center justify-center mt-0.5 shrink-0">
+                <div class="w-2 h-2 rounded-full bg-[#8A6729]"></div>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-stone-900">Pemodelan Arsitektur dengan Revit</div>
+                <div class="text-[11px] text-stone-600 mt-0.5">Sedang berlangsung • 5/8 materi</div>
+              </div>
+            </div>
+            <div class="text-right w-20">
+              <div class="text-[11px] font-bold text-stone-700">62%</div>
+              <div class="w-full h-1.5 bg-stone-200 rounded-full mt-1 overflow-hidden">
+                <div class="w-[62%] h-full bg-[#8A6729]"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full border-2 border-stone-300 mt-0.5 shrink-0"></div>
+              <div>
+                <div class="text-xs font-bold text-stone-800">Koordinasi dan Kolaborasi BIM</div>
+                <div class="text-[11px] text-stone-500 mt-0.5">Belum dimulai • 0/6 materi</div>
+              </div>
+            </div>
+            <div class="text-right w-20">
+              <div class="text-[11px] text-stone-500">0%</div>
+              <div class="w-full h-1.5 bg-stone-200 rounded-full mt-1"></div>
+            </div>
+          </div>
+
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full border-2 border-stone-300 mt-0.5 shrink-0"></div>
+              <div>
+                <div class="text-xs font-bold text-stone-800">BIM untuk Konstruksi</div>
+                <div class="text-[11px] text-stone-500 mt-0.5">Belum dimulai • 0/5 materi</div>
+              </div>
+            </div>
+            <div class="text-right w-20">
+              <div class="text-[11px] text-stone-500">0%</div>
+              <div class="w-full h-1.5 bg-stone-200 rounded-full mt-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tugas Mendatang -->
+      <div class="col-span-4 bg-[#FAF8F4] border border-stone-200/80 rounded-2xl p-5">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-serif-title font-bold text-base text-stone-900">Tugas Mendatang</h3>
+          <a href="project.html" class="text-xs text-[#8A6729] font-medium flex items-center gap-1">Lihat Semua <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+        </div>
+        <div class="space-y-3.5">
+          <div class="flex items-center justify-between pb-3 border-b border-stone-200/60">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-11 rounded-lg bg-red-50 border border-red-200/60 flex flex-col items-center justify-center text-red-800">
+                <span class="text-[9px] font-bold uppercase">APR</span>
+                <span class="text-sm font-bold leading-none">28</span>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-stone-800">Upload Model Arsitektur - Modul 3</div>
+                <div class="text-[11px] text-stone-500">Pemodelan Arsitektur dengan Revit</div>
+              </div>
+            </div>
+            <span class="text-[10px] bg-red-100 text-red-700 font-semibold px-2.5 py-1 rounded-md">3 hari lagi</span>
+          </div>
+
+          <div class="flex items-center justify-between pb-3 border-b border-stone-200/60">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-11 rounded-lg bg-stone-100 border border-stone-200 flex flex-col items-center justify-center text-stone-800">
+                <span class="text-[9px] font-bold uppercase">APR</span>
+                <span class="text-sm font-bold leading-none">30</span>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-stone-800">Kuis: Families dan Parameter</div>
+                <div class="text-[11px] text-stone-500">Pemodelan Arsitektur dengan Revit</div>
+              </div>
+            </div>
+            <span class="text-[10px] bg-[#F5EBD6] text-[#8B6827] font-semibold px-2.5 py-1 rounded-md">5 hari lagi</span>
+          </div>
+
+          <div class="flex items-center justify-between pb-3 border-b border-stone-200/60">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-11 rounded-lg bg-stone-100 border border-stone-200 flex flex-col items-center justify-center text-stone-800">
+                <span class="text-[9px] font-bold uppercase">MEI</span>
+                <span class="text-sm font-bold leading-none">03</span>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-stone-800">Review Model Struktur</div>
+                <div class="text-[11px] text-stone-500">Koordinasi dan Kolaborasi BIM</div>
+              </div>
+            </div>
+            <span class="text-[10px] bg-stone-200/70 text-stone-700 font-medium px-2.5 py-1 rounded-md">8 hari lagi</span>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-11 rounded-lg bg-stone-100 border border-stone-200 flex flex-col items-center justify-center text-stone-800">
+                <span class="text-[9px] font-bold uppercase">MEI</span>
+                <span class="text-sm font-bold leading-none">05</span>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-stone-800">Presentasi Project Akhir</div>
+                <div class="text-[11px] text-stone-500">BIM untuk Konstruksi</div>
+              </div>
+            </div>
+            <span class="text-[10px] bg-stone-200/70 text-stone-700 font-medium px-2.5 py-1 rounded-md">10 hari lagi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Unggulan -->
+      <div class="col-span-4 bg-[#FAF8F4] border border-stone-200/80 rounded-2xl p-5">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-serif-title font-bold text-base text-stone-900">Project Unggulan</h3>
+          <a href="project.html" class="text-xs text-[#8A6729] font-medium flex items-center gap-1">Lihat Project <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+        </div>
+        <div class="relative rounded-xl overflow-hidden h-36 border border-stone-200">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Project" />
+          <div class="absolute right-2 top-2 bg-white/95 rounded-lg p-1 flex flex-col gap-1 shadow">
+            <i data-lucide="box" class="w-3.5 h-3.5 text-stone-700"></i>
+            <i data-lucide="layers" class="w-3.5 h-3.5 text-stone-700"></i>
+            <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-stone-700"></i>
+          </div>
+        </div>
+        <div class="flex items-start justify-between mt-3">
+          <div>
+            <h4 class="font-bold text-sm text-stone-900">Mixed-Use Building – Sudirman</h4>
+            <p class="text-[11px] text-stone-500">Project Pelatihan • Pemodelan Arsitektur</p>
+          </div>
+          <span class="text-[10px] bg-blue-100 text-blue-800 font-semibold px-2.5 py-1 rounded-full">Sedang Dikerjakan</span>
+        </div>
+        <div class="grid grid-cols-3 gap-2 mt-3 pt-3 border-t border-stone-200/70 text-center">
+          <div>
+            <div class="text-xs font-bold text-stone-900">74%</div>
+            <div class="text-[10px] text-stone-500">Progres Model</div>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-stone-900">12</div>
+            <div class="text-[10px] text-stone-500">Jumlah Lantai</div>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-stone-900">2.450 m²</div>
+            <div class="text-[10px] text-stone-500">Luas Bangunan</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom 3 Columns -->
+    <section class="grid grid-cols-12 gap-5 mb-5">
+      <!-- Aktivitas Terakhir -->
+      <div class="col-span-4 bg-[#FAF8F4] border border-stone-200/80 rounded-2xl p-5">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-serif-title font-bold text-base text-stone-900">Aktivitas Terakhir</h3>
+          <a href="#" class="text-xs text-[#8A6729] font-medium">Lihat Semua →</a>
+        </div>
+        <div class="space-y-3.5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-stone-200/70 flex items-center justify-center"><i data-lucide="file-check" class="w-4 h-4 text-stone-700"></i></div>
+              <div>
+                <div class="text-xs font-semibold text-stone-800">Anda mengumpulkan tugas Modul 2</div>
+                <div class="text-[11px] text-stone-500">2 jam yang lalu</div>
+              </div>
+            </div>
+            <span class="text-[10px] bg-emerald-100 text-emerald-800 font-semibold px-2.5 py-1 rounded-full">Berhasil</span>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-[#F5EBD6] flex items-center justify-center"><i data-lucide="award" class="w-4 h-4 text-[#8A6729]"></i></div>
+              <div>
+                <div class="text-xs font-semibold text-stone-800">Nilai kuis Modul 1 diumumkan</div>
+                <div class="text-[11px] text-stone-500">1 hari yang lalu</div>
+              </div>
+            </div>
+            <span class="text-xs bg-blue-100 text-blue-800 font-bold px-2.5 py-1 rounded-full">92</span>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-stone-200/70 flex items-center justify-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-stone-700"></i></div>
+              <div>
+                <div class="text-xs font-semibold text-stone-800">Anda menyelesaikan materi "Families"</div>
+                <div class="text-[11px] text-stone-500">2 hari yang lalu</div>
+              </div>
+            </div>
+            <span class="text-[10px] bg-emerald-100 text-emerald-800 font-semibold px-2.5 py-1 rounded-full">Selesai</span>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-[#F5EBD6] flex items-center justify-center"><i data-lucide="message-circle" class="w-4 h-4 text-[#8A6729]"></i></div>
+              <div>
+                <div class="text-xs font-semibold text-stone-800">Komentar baru dari Mentor pada project Anda</div>
+                <div class="text-[11px] text-stone-500">3 hari yang lalu</div>
+              </div>
+            </div>
+            <span class="text-[10px] bg-[#F5EBD6] text-[#8A6729] font-semibold px-2.5 py-1 rounded-full">1 komentar</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Status Pengumpulan Project -->
+      <div class="col-span-4 bg-[#FAF8F4] border border-stone-200/80 rounded-2xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-serif-title font-bold text-base text-stone-900">Status Pengumpulan Project</h3>
+            <a href="project.html" class="text-xs text-[#8A6729] font-medium">Lihat Semua →</a>
+          </div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=200&q=80" class="w-16 h-12 rounded-lg object-cover" />
+            <div>
+              <div class="text-xs font-bold text-stone-900">Project 01 – Rumah Tinggal 2 Lantai</div>
+              <div class="text-[11px] text-stone-500">Pemodelan Arsitektur</div>
+            </div>
+          </div>
+          <!-- Stepper -->
+          <div class="grid grid-cols-4 text-center my-4 relative">
+            <div>
+              <div class="w-5 h-5 mx-auto rounded-full bg-emerald-700 text-white flex items-center justify-center text-[10px]">✓</div>
+              <div class="text-[10px] text-stone-700 mt-1">Upload<br>Model</div>
+            </div>
+            <div>
+              <div class="w-5 h-5 mx-auto rounded-full bg-emerald-700 text-white flex items-center justify-center text-[10px]">✓</div>
+              <div class="text-[10px] text-stone-700 mt-1">Gambar<br>Kerja</div>
+            </div>
+            <div>
+              <div class="w-5 h-5 mx-auto rounded-full bg-emerald-700 text-white flex items-center justify-center text-[10px]">✓</div>
+              <div class="text-[10px] text-stone-700 mt-1">Dokumentasi</div>
+            </div>
+            <div>
+              <div class="w-5 h-5 mx-auto rounded-full bg-stone-300 text-stone-600 flex items-center justify-center text-[10px]">•</div>
+              <div class="text-[10px] text-stone-500 mt-1">Review<br>Mentor</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#F3E9D2]/60 border border-[#E5D3AC] rounded-xl p-3 flex items-center justify-between">
+          <div>
+            <div class="text-xs font-bold text-stone-800">Menunggu Review Mentor</div>
+            <div class="text-[10px] text-stone-500">Dikumpulkan pada 25 April 2024, 14:32</div>
+          </div>
+          <a href="project.html" class="bg-[#4E3E24] text-white text-xs px-3 py-1.5 rounded-lg font-medium">Lihat Detail</a>
+        </div>
+      </div>
+
+      <!-- Ringkasan Kompetensi -->
+      <div class="col-span-4 bg-[#FAF8F4] border border-stone-200/80 rounded-2xl p-5">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-serif-title font-bold text-base text-stone-900">Ringkasan Kompetensi</h3>
+          <a href="kompetensi.html" class="text-xs text-[#8A6729] font-medium">Lihat Semua →</a>
+        </div>
+        <div class="space-y-4">
+          <div class="flex items-center justify-between gap-3">
+            <span class="text-xs font-medium text-stone-800 w-40">Pemodelan Arsitektur</span>
+            <div class="flex-1 h-2 bg-stone-200 rounded-full overflow-hidden"><div class="w-[80%] h-full bg-[#A87F32]"></div></div>
+            <span class="text-xs font-bold text-stone-800 w-9 text-right">80%</span>
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <span class="text-xs font-medium text-stone-800 w-40">Pemodelan Struktur</span>
+            <div class="flex-1 h-2 bg-stone-200 rounded-full overflow-hidden"><div class="w-[55%] h-full bg-[#586F50]"></div></div>
+            <span class="text-xs font-bold text-stone-800 w-9 text-right">55%</span>
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <span class="text-xs font-medium text-stone-800 w-40">Pemodelan MEP</span>
+            <div class="flex-1 h-2 bg-stone-200 rounded-full overflow-hidden"><div class="w-[40%] h-full bg-[#8D7249]"></div></div>
+            <span class="text-xs font-bold text-stone-800 w-9 text-right">40%</span>
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <span class="text-xs font-medium text-stone-800 w-40">Koordinasi & Kolaborasi</span>
+            <div class="flex-1 h-2 bg-stone-200 rounded-full overflow-hidden"><div class="w-[60%] h-full bg-[#586F50]"></div></div>
+            <span class="text-xs font-bold text-stone-800 w-9 text-right">60%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Mini Cards -->
+    <section class="grid grid-cols-4 gap-4">
+      <div class="bg-[#FAF8F4] border border-stone-200/80 rounded-xl p-3.5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-[#F5EBD6] text-[#8A6729] flex items-center justify-center"><i data-lucide="target" class="w-5 h-5"></i></div>
+          <div>
+            <div class="text-xs font-bold text-[#8A6729]">Tantangan Hari Ini</div>
+            <div class="text-[11px] text-stone-600">Selesaikan 1 materi video dan buat 1 catatan pembelajaran.</div>
+          </div>
+        </div>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-stone-400"></i>
+      </div>
+
+      <div class="bg-[#FAF8F4] border border-stone-200/80 rounded-xl p-3.5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-red-50 text-red-700 flex items-center justify-center"><i data-lucide="calendar" class="w-5 h-5"></i></div>
+          <div>
+            <div class="text-xs font-bold text-stone-800">Deadline Terdekat</div>
+            <div class="text-[11px] text-stone-600">Upload Model Arsitektur - Modul 3</div>
+            <div class="text-[11px] text-red-700 font-bold">3 hari lagi</div>
+          </div>
+        </div>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-stone-400"></i>
+      </div>
+
+      <div class="bg-[#FAF8F4] border border-stone-200/80 rounded-xl p-3.5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-red-50 text-red-700 flex items-center justify-center"><i data-lucide="alert-triangle" class="w-5 h-5"></i></div>
+          <div>
+            <div class="text-xs font-bold text-stone-800">Issue Terbuka</div>
+            <div class="text-xs text-red-700 font-bold">2 issue</div>
+            <div class="text-[11px] text-stone-500">Perlu perhatian pada project Anda</div>
+          </div>
+        </div>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-stone-400"></i>
+      </div>
+
+      <div class="bg-[#FAF8F4] border border-stone-200/80 rounded-xl p-3.5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-[#F5EBD6] text-[#8A6729] flex items-center justify-center"><i data-lucide="trophy" class="w-5 h-5"></i></div>
+          <div>
+            <div class="text-xs font-bold text-stone-800">Skor Terakhir</div>
+            <div class="text-base font-bold text-stone-900">92</div>
+            <div class="text-[11px] text-stone-500">Kuis Modul 1 – Pengenalan BIM</div>
+          </div>
+        </div>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-stone-400"></i>
+      </div>
+    </section>
+  </main>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIM Lab - BIM Nusantara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F4F1EA; color: #232321; }
+    .font-serif-title { font-family: 'Playfair Display', serif; }
+    .sidebar-bg {
+      background: linear-gradient(180deg, #252620 0%, #252620 55%, rgba(28,29,24,0.88) 75%, rgba(22,23,19,0.95) 100%),
+                  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80') bottom center / cover no-repeat;
+    }
+    .nav-active {
+      background: linear-gradient(90deg, #6E5831 0%, #836A3D 100%);
+      border-left: 4px solid #D9AB55;
+      color: #FFFFFF;
+    }
+    .hero-banner {
+      background: linear-gradient(90deg, rgba(114,101,83,0.94) 0%, rgba(92,81,66,0.78) 50%, rgba(24,22,18,0.75) 100%),
+                  url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80') center / cover no-repeat;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex">
+
+  <!-- SIDEBAR -->
+  <aside class="w-64 sidebar-bg text-stone-300 flex flex-col justify-between shrink-0 min-h-screen select-none">
+    <div>
+      <div class="px-6 py-6 flex items-center gap-3 border-b border-white/10">
+        <div class="w-10 h-10 rounded bg-[#332B1E] border border-[#C69C49]/50 flex items-center justify-center text-[#D8AE5E]">
+          <i data-lucide="building-2" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <div class="text-white font-bold tracking-wider text-sm">BIM NUSANTARA</div>
+          <div class="text-[9px] tracking-[0.22em] text-stone-400">LEARN • MODEL • BUILD</div>
+        </div>
+      </div>
+      <nav class="mt-5 px-3 space-y-1.5 text-sm">
+        <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="home" class="w-4 h-4"></i> Dashboard</a>
+        <a href="belajar.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="book-open" class="w-4 h-4"></i> Belajar</a>
+        <a href="bim-lab.html" class="nav-active flex items-center gap-3 px-4 py-3 rounded-lg font-medium"><i data-lucide="box" class="w-4 h-4"></i> BIM Lab</a>
+        <a href="bim-studio.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="monitor" class="w-4 h-4"></i> BIM Studio</a>
+        <a href="project.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="folder" class="w-4 h-4"></i> Project</a>
+        <a href="kompetensi.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="bar-chart-3" class="w-4 h-4"></i> Kompetensi</a>
+        <a href="profil.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="award" class="w-4 h-4"></i> Profil & Sertifikat</a>
+      </nav>
+    </div>
+    <div class="p-6">
+      <p class="font-serif-title text-white/90 text-base leading-snug">Membangun<br>Kompetensi BIM<br>untuk Indonesia<br>yang Lebih Baik</p>
+      <div class="w-8 h-0.5 bg-[#D4A64E] mt-3"></div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="flex-1 p-7 overflow-y-auto">
+    <header class="flex items-center justify-between mb-6">
+      <div>
+        <h1 class="text-2xl font-bold text-stone-900">BIM Lab</h1>
+        <p class="text-xs text-stone-500 mt-0.5">Ikuti praktik langkah demi langkah untuk membangun kemampuan BIM.</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="flex items-center bg-white border border-stone-200 rounded-xl px-3.5 py-2 w-72 shadow-sm">
+          <i data-lucide="search" class="w-4 h-4 text-stone-400 mr-2"></i>
+          <input type="text" placeholder="Cari materi, project, atau topik..." class="text-xs w-full outline-none bg-transparent" />
+          <span class="text-[10px] bg-stone-100 text-stone-500 px-1.5 py-0.5 rounded border">Ctrl K</span>
+        </div>
+        <button class="flex items-center gap-2 bg-[#EFECE4] border border-stone-300/70 rounded-xl px-3.5 py-2 text-xs font-medium text-stone-700">
+          <i data-lucide="building" class="w-4 h-4"></i> PT. Arsitek Muda Indonesia <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+        </button>
+        <div class="flex items-center gap-2.5 pl-1">
+          <div class="w-9 h-9 rounded-full bg-[#2C2D26] text-white flex items-center justify-center text-xs font-bold">AD</div>
+          <div>
+            <div class="text-xs font-bold text-stone-800">Andi Dwiputra</div>
+            <div class="text-[11px] text-stone-500">Peserta</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="hero-banner rounded-2xl p-7 text-white mb-6 flex justify-between items-end">
+      <div>
+        <div class="text-[11px] tracking-[0.2em] uppercase text-[#F4D38B] font-semibold mb-1.5">PRAKTIK BIM TERPANDU</div>
+        <h2 class="font-serif-title text-3xl font-semibold leading-snug">Architecture Modeling -<br>Rumah Tinggal 2 Lantai</h2>
+        <p class="text-xs text-stone-100/90 mt-2 max-w-lg">Pelajari alur lengkap pemodelan arsitektur rumah tinggal 2 lantai dari persiapan project hingga menghasilkan model siap presentasi.</p>
+        <div class="flex gap-2 mt-4 text-[11px]">
+          <span class="bg-black/45 px-3 py-1 rounded-full border border-white/15">Revit Architecture</span>
+          <span class="bg-black/45 px-3 py-1 rounded-full border border-white/15">Level: Pemula</span>
+          <span class="bg-black/45 px-3 py-1 rounded-full border border-white/15">6 Modul</span>
+          <span class="bg-black/45 px-3 py-1 rounded-full border border-white/15">± 4 Jam</span>
+        </div>
+      </div>
+      <div class="bg-black/60 backdrop-blur-md p-4 rounded-xl border border-white/15 w-72">
+        <div class="flex justify-between text-xs mb-1">
+          <span>Progress Lab</span>
+          <span class="text-stone-300">3 dari 6 langkah selesai</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="text-2xl font-bold">40%</span>
+          <div class="flex-1 h-2 bg-stone-600 rounded-full overflow-hidden">
+            <div class="w-[40%] h-full bg-[#D8AE5E]"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 Info Cards -->
+    <section class="grid grid-cols-4 gap-4 mb-6">
+      <div class="bg-[#FAF8F4] border border-stone-200 rounded-2xl p-4">
+        <div class="text-[11px] text-stone-500">Target Kompetensi</div>
+        <div class="text-sm font-bold text-stone-900 mt-0.5">Pemodelan Arsitektur Dasar</div>
+        <p class="text-[11px] text-stone-500 mt-1">Mampu membuat model rumah tinggal 2 lantai lengkap dengan elemen utama.</p>
+      </div>
+      <div class="bg-[#FAF8F4] border border-stone-200 rounded-2xl p-4">
+        <div class="text-[11px] text-stone-500">Estimasi Waktu</div>
+        <div class="text-lg font-bold text-stone-900 mt-0.5">4 Jam</div>
+        <p class="text-[11px] text-stone-500 mt-1">Durasi total seluruh praktik termasuk latihan mandiri.</p>
+      </div>
+      <div class="bg-[#FAF8F4] border border-stone-200 rounded-2xl p-4">
+        <div class="text-[11px] text-stone-500">Level</div>
+        <div class="text-lg font-bold text-stone-900 mt-0.5">Pemula</div>
+        <p class="text-[11px] text-stone-500 mt-1">Cocok untuk pengguna baru Revit Architecture.</p>
+      </div>
+      <div class="bg-[#FAF8F4] border border-stone-200 rounded-2xl p-4 flex flex-col justify-between">
+        <div>
+          <div class="text-[11px] text-stone-500">File Latihan</div>
+          <div class="text-sm font-bold text-stone-900">RT_2Lantai_Start.rvt</div>
+          <div class="text-[11px] text-stone-400">245 MB</div>
+        </div>
+        <button class="mt-2 bg-[#F2E5C7] text-[#6B4F1D] font-bold text-xs py-1.5 rounded-lg">↓ Download File</button>
+      </div>
+    </section>
+
+    <!-- Main Stepper + Content -->
+    <section class="grid grid-cols-12 gap-5">
+      <!-- Left Steps -->
+      <div class="col-span-4 bg-[#FAF8F4] border border-stone-200 rounded-2xl p-4 space-y-3">
+        <div class="bg-[#F5EBD6]/70 border border-[#D7BE8E] rounded-xl p-3.5 flex items-start justify-between">
+          <div class="flex gap-3">
+            <span class="w-6 h-6 rounded-full bg-[#6B4F1D] text-white text-xs font-bold flex items-center justify-center shrink-0">1</span>
+            <div>
+              <div class="text-xs font-bold text-stone-900">Persiapan Project</div>
+              <div class="text-[11px] text-stone-600 mt-0.5">Membuat project baru dan mengatur template, unit, serta lokasi file.</div>
+            </div>
+          </div>
+          <span class="text-emerald-700 font-bold">✓</span>
+        </div>
+
+        <div class="p-3.5 flex items-start justify-between border-b border-stone-200/70">
+          <div class="flex gap-3">
+            <span class="w-6 h-6 rounded-full bg-stone-200 text-stone-700 text-xs font-bold flex items-center justify-center shrink-0">2</span>
+            <div>
+              <div class="text-xs font-bold text-stone-900">Membuat Level</div>
+              <div class="text-[11px] text-stone-500 mt-0.5">Membuat level lantai 1, lantai 2 dan level atap.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-3.5 flex items-start justify-between border-b border-stone-200/70">
+          <div class="flex gap-3">
+            <span class="w-6 h-6 rounded-full bg-stone-200 text-stone-700 text-xs font-bold flex items-center justify-center shrink-0">3</span>
+            <div>
+              <div class="text-xs font-bold text-stone-900">Membuat Grid</div>
+              <div class="text-[11px] text-stone-500 mt-0.5">Membuat grid sebagai acuan pemodelan.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-3.5 flex items-start justify-between border-b border-stone-200/70">
+          <div class="flex gap-3">
+            <span class="w-6 h-6 rounded-full bg-stone-200 text-stone-700 text-xs font-bold flex items-center justify-center shrink-0">4</span>
+            <div>
+              <div class="text-xs font-bold text-stone-900">Modeling Dinding</div>
+              <div class="text-[11px] text-stone-500 mt-0.5">Membuat dan mengatur dinding eksterior dan interior.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-3.5 flex items-start justify-between border-b border-stone-200/70">
+          <div class="flex gap-3">
+            <span class="w-6 h-6 rounded-full bg-stone-200 text-stone-700 text-xs font-bold flex items-center justify-center shrink-0">5</span>
+            <div>
+              <div class="text-xs font-bold text-stone-900">Menambahkan Pintu & Jendela</div>
+              <div class="text-[11px] text-stone-500 mt-0.5">Menempatkan family pintu dan jendela pada model.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-3.5 flex items-start justify-between">
+          <div class="flex gap-3">
+            <span class="w-6 h-6 rounded-full bg-stone-200 text-stone-700 text-xs font-bold flex items-center justify-center shrink-0">6</span>
+            <div>
+              <div class="text-xs font-bold text-stone-900">Finishing & Export</div>
+              <div class="text-[11px] text-stone-500 mt-0.5">Memberikan material, membuat view, dan mengekspor gambar.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Detail -->
+      <div class="col-span-8 bg-[#FAF8F4] border border-stone-200 rounded-2xl p-6">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <div class="text-xs text-[#8A6729] font-semibold">Langkah 1 dari 6</div>
+            <h3 class="font-serif-title text-2xl font-bold text-stone-900">Persiapan Project</h3>
+            <p class="text-xs text-stone-600 mt-1">Pada tahap ini Anda akan membuat project baru, memilih template yang tepat, mengatur unit proyek, dan menyiapkan folder kerja.</p>
+          </div>
+          <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">Selesai ✓</span>
+        </div>
+
+        <!-- Revit Mock Viewport -->
+        <div class="rounded-xl overflow-hidden border border-stone-300 bg-white mb-5">
+          <div class="bg-stone-100 px-3 py-1.5 border-b border-stone-300 text-[11px] font-semibold text-stone-700 flex justify-between">
+            <span>Autodesk Revit - RT_2Lantai - 3D View: {3D}</span>
+            <span>Atap +7.20 | Lantai 2 +3.60 | Lantai 1 +0.00</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" class="w-full h-64 object-cover" />
+        </div>
+
+        <!-- 3 Bottom Boxes -->
+        <div class="grid grid-cols-3 gap-4">
+          <div class="bg-white border border-stone-200 rounded-xl p-4">
+            <h4 class="text-xs font-bold text-stone-900 mb-2.5">Instruksi Langkah demi Langkah</h4>
+            <ol class="space-y-2 text-[11px] text-stone-700 list-decimal pl-4">
+              <li>Buka Autodesk Revit dan pilih template <b>Architectural.rte</b></li>
+              <li>Simpan project dengan nama <b>RT_2Lantai_Anda.rvt</b></li>
+              <li>Atur unit proyek ke <b>meter (m)</b></li>
+              <li>Periksa pengaturan lokasi file dan folder kerja</li>
+              <li>Simpan dan pastikan project siap untuk dimulai</li>
+            </ol>
+          </div>
+
+          <div class="bg-white border border-stone-200 rounded-xl p-4">
+            <h4 class="text-xs font-bold text-stone-900 mb-2.5">Checklist Penyelesaian</h4>
+            <div class="space-y-2 text-[11px]">
+              <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-emerald-700" /> Project baru berhasil dibuat</label>
+              <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-emerald-700" /> Template arsitektur dipilih</label>
+              <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-emerald-700" /> Unit proyek diatur ke meter</label>
+              <label class="flex items-center gap-2"><input type="checkbox" /> File disimpan dengan nama yang benar</label>
+              <label class="flex items-center gap-2"><input type="checkbox" /> Folder kerja sudah tersusun</label>
+            </div>
+          </div>
+
+          <div class="bg-[#FDF6E7] border border-[#E6D0A3] rounded-xl p-4">
+            <h4 class="text-xs font-bold text-[#7A591E] mb-2.5">💡 Tips & Catatan</h4>
+            <ul class="space-y-1.5 text-[11px] text-stone-700 list-disc pl-4">
+              <li>Gunakan template Architectural.rte untuk pemodelan arsitektur.</li>
+              <li>Pastikan unit proyek sesuai (meter) agar dimensi akurat.</li>
+              <li>Buat folder terpisah untuk file latihan dan hasil akhir.</li>
+              <li>Simpan project secara berkala (Ctrl + S).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex justify-end gap-3 mt-5">
+          <button class="px-4 py-2 rounded-lg border border-stone-300 text-xs text-stone-500">‹ Sebelumnya</button>
+          <button class="px-5 py-2 rounded-lg bg-[#C59B49] text-stone-950 font-bold text-xs">Lanjut ke Langkah 2 →</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

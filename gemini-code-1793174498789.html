@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIM Studio - BIM Nusantara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F4F1EA; color: #232321; }
+    .font-serif-title { font-family: 'Playfair Display', serif; }
+    .sidebar-bg {
+      background: linear-gradient(180deg, #252620 0%, #252620 55%, rgba(28,29,24,0.88) 75%, rgba(22,23,19,0.95) 100%),
+                  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80') bottom center / cover no-repeat;
+    }
+    .nav-active {
+      background: linear-gradient(90deg, #6E5831 0%, #836A3D 100%);
+      border-left: 4px solid #D9AB55;
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex">
+
+  <!-- SIDEBAR -->
+  <aside class="w-64 sidebar-bg text-stone-300 flex flex-col justify-between shrink-0 min-h-screen select-none">
+    <div>
+      <div class="px-6 py-6 flex items-center gap-3 border-b border-white/10">
+        <div class="w-10 h-10 rounded bg-[#332B1E] border border-[#C69C49]/50 flex items-center justify-center text-[#D8AE5E]">
+          <i data-lucide="building-2" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <div class="text-white font-bold tracking-wider text-sm">BIM NUSANTARA</div>
+          <div class="text-[9px] tracking-[0.22em] text-stone-400">LEARN • MODEL • BUILD</div>
+        </div>
+      </div>
+      <nav class="mt-5 px-3 space-y-1.5 text-sm">
+        <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="home" class="w-4 h-4"></i> Dashboard</a>
+        <a href="belajar.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="book-open" class="w-4 h-4"></i> Belajar</a>
+        <a href="bim-lab.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="box" class="w-4 h-4"></i> BIM Lab</a>
+        <a href="bim-studio.html" class="nav-active flex items-center gap-3 px-4 py-3 rounded-lg font-medium"><i data-lucide="monitor" class="w-4 h-4"></i> BIM Studio</a>
+        <a href="project.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="folder" class="w-4 h-4"></i> Project</a>
+        <a href="kompetensi.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="bar-chart-3" class="w-4 h-4"></i> Kompetensi</a>
+        <a href="profil.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition"><i data-lucide="award" class="w-4 h-4"></i> Profil & Sertifikat</a>
+      </nav>
+    </div>
+    <div class="p-6">
+      <p class="font-serif-title text-white/90 text-base leading-snug">Membangun<br>Kompetensi BIM<br>untuk Indonesia<br>yang Lebih Baik</p>
+      <div class="w-8 h-0.5 bg-[#D4A64E] mt-3"></div>
+    </div>
+  </aside>
+
+  <!-- MAIN WORKSPACE -->
+  <main class="flex-1 flex flex-col p-6 pb-2 overflow-hidden">
+    <!-- Header -->
+    <header class="flex items-center justify-between mb-4">
+      <div>
+        <h1 class="text-2xl font-bold text-stone-900">BIM Studio</h1>
+        <p class="text-xs text-stone-500">Bangun model BIM langsung di browser.</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="flex items-center bg-white border border-stone-200 rounded-xl px-3.5 py-2 w-72 shadow-sm">
+          <i data-lucide="search" class="w-4 h-4 text-stone-400 mr-2"></i>
+          <input type="text" placeholder="Cari materi, project, atau topik..." class="text-xs w-full outline-none bg-transparent" />
+          <span class="text-[10px] bg-stone-100 text-stone-500 px-1.5 py-0.5 rounded border">Ctrl K</span>
+        </div>
+        <button class="flex items-center gap-2 bg-[#EFECE4] border border-stone-300/70 rounded-xl px-3.5 py-2 text-xs font-medium text-stone-700">
+          <i data-lucide="building" class="w-4 h-4"></i> PT. Arsitek Muda Indonesia
+        </button>
+        <div class="flex items-center gap-2.5 pl-1">
+          <div class="w-9 h-9 rounded-full bg-[#2C2D26] text-white flex items-center justify-center text-xs font-bold">AD</div>
+          <div>
+            <div class="text-xs font-bold text-stone-800">Andi Dwiputra</div>
+            <div class="text-[11px] text-stone-500">Peserta</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Studio Action Toolbar -->
+    <div class="bg-[#FAF8F4] border border-stone-200 rounded-xl p-2.5 mb-3 flex items-center justify-between text-xs">
+      <div class="flex items-center gap-2">
+        <button class="bg-[#735A2F] text-white font-semibold px-3.5 py-1.5 rounded-lg">💾 Simpan ▾</button>
+        <button class="bg-white border border-stone-200 px-3 py-1.5 rounded-lg text-stone-600">↶ Undo</button>
+        <button class="bg-white border border-stone-200 px-3 py-1.5 rounded-lg text-stone-600">↷ Redo</button>
+        <button class="bg-white border border-stone-200 px-3 py-1.5 rounded-lg text-emerald-800 font-medium">✓ Validasi Model</button>
+        <button class="bg-[#6A532C] text-white font-semibold px-3.5 py-1.5 rounded-lg">↑ Submit ke Project</button>
+      </div>
+      <div class="flex items-center gap-1 bg-stone-200/70 p-1 rounded-lg">
+        <button class="bg-[#735A2F] text-white font-semibold px-3 py-1 rounded">3D</button>
+        <button class="px-3 py-1 text-stone-700">2D</button>
+        <button class="px-3 py-1 text-stone-700">Section</button>
+        <button class="px-3 py-1 text-stone-700">Elevation</button>
+      </div>
+      <div class="flex items-center gap-2">
+        <select class="bg-white border border-stone-200 rounded-lg px-3 py-1.5 text-xs font-medium">
+          <option>Level 1 - Ground Floor</option>
+        </select>
+        <button class="p-1.5 bg-white border border-stone-200 rounded-lg"><i data-lucide="settings" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+
+    <!-- 3-Pane CAD Workspace -->
+    <div class="grid grid-cols-12 gap-3 flex-1 min-h-[600px]">
+      <!-- Left Model Tree -->
+      <div class="col-span-3 bg-[#FAF8F4] border border-stone-200 rounded-xl p-3 flex flex-col text-xs">
+        <div class="grid grid-cols-3 bg-stone-200/60 p-1 rounded-lg mb-3 text-center font-medium">
+          <div class="bg-white rounded py-1 shadow-sm">Model</div>
+          <div class="py-1 text-stone-600">Levels</div>
+          <div class="py-1 text-stone-600">Library</div>
+        </div>
+        <input type="text" placeholder="Cari elemen model..." class="bg-white border border-stone-200 rounded-lg px-3 py-1.5 text-xs mb-3" />
+        <div class="space-y-1.5 overflow-y-auto text-[11px] text-stone-700">
+          <div class="font-bold">▾ 📦 BIM Model - Sudirman Tower</div>
+          <div class="pl-3">▸ 📁 Site</div>
+          <div class="pl-3 font-semibold">▾ 📁 Building</div>
+          <div class="pl-6">▸ 📁 Level 3 - Roof</div>
+          <div class="pl-6">▸ 📁 Level 2 - Lantai 2</div>
+          <div class="pl-6 bg-[#F3E7CE] py-1 px-2 rounded font-bold text-[#6E5223]">▾ 📁 Level 1 - Ground Floor</div>
+          <div class="pl-10">▾ Walls (24)</div>
+          <div class="pl-12 bg-[#F5EBD6] py-1 px-2 rounded font-semibold">Basic Wall - 200mm</div>
+          <div class="pl-12 py-0.5">Basic Wall - 150mm</div>
+          <div class="pl-12 py-0.5">Basic Wall - 300mm</div>
+          <div class="pl-10">▸ Doors (6)</div>
+          <div class="pl-10">▸ Windows (12)</div>
+          <div class="pl-10">▸ Columns (18)</div>
+          <div class="pl-10">▸ Beams (22)</div>
+          <div class="pl-10">▸ Floors (5)</div>
+          <div class="pl-10">▸ Roofs (1)</div>
+          <div class="pl-3 pt-2 font-semibold">▾ 📁 Views</div>
+          <div class="pl-6">3D View - Perspektif 🔒</div>
+          <div class="pl-6">3D View - Eksterior</div>
+          <div class="pl-6">Floor Plan - Level 1</div>
+          <div class="pl-6">Section A-A</div>
+        </div>
+      </div>
+
+      <!-- Center 3D Viewport -->
+      <div class="col-span-6 relative rounded-xl overflow-hidden border border-stone-300 bg-stone-200">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover" />
+        <!-- Left Floating Tool Palette -->
+        <div class="absolute left-3 top-3 bg-[#FAF8F4]/95 border border-stone-300 rounded-xl p-1.5 flex flex-col gap-1.5 text-[10px] text-center shadow-md">
+          <div class="bg-[#F2E3C2] text-[#6B4F1D] font-bold px-2 py-1.5 rounded-lg">↖<br>Select</div>
+          <div class="px-2 py-1 hover:bg-stone-100 rounded">＃<br>Grid</div>
+          <div class="px-2 py-1 hover:bg-stone-100 rounded">▭<br>Wall</div>
+          <div class="px-2 py-1 hover:bg-stone-100 rounded">▯<br>Column</div>
+          <div class="px-2 py-1 hover:bg-stone-100 rounded">═<br>Beam</div>
+          <div class="px-2 py-1 hover:bg-stone-100 rounded">▱<br>Slab</div>
+          <div class="px-2 py-1 hover:bg-stone-100 rounded">🚪<br>Door</div>
+          <div class="px-2 py-1 hover:bg-stone-100 rounded">🪟<br>Window</div>
+          <div class="px-2 py-1 hover:bg-stone-100 rounded">📏<br>Measure</div>
+        </div>
+
+        <!-- Highlighted Wall Selection Box -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div class="w-44 h-28 border-2 border-blue-500 bg-blue-500/20 rounded flex items-center justify-center">
+            <span class="bg-blue-600 text-white text-[10px] px-2 py-0.5 rounded font-bold">XYZ Gizmo • Basic Wall 200mm</span>
+          </div>
+        </div>
+
+        <!-- Bottom Viewport Controls -->
+        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#FAF8F4]/95 border border-stone-300 rounded-xl px-4 py-1.5 flex items-center gap-4 text-xs shadow-md">
+          <span>✥</span><span>↻</span><span>✋</span><span>📦 Realistic ▾</span><span>☀</span><span>▦</span><span>⛶</span>
+        </div>
+      </div>
+
+      <!-- Right Properties Inspector -->
+      <div class="col-span-3 bg-[#FAF8F4] border border-stone-200 rounded-xl p-3.5 text-xs space-y-3 overflow-y-auto">
+        <div class="grid grid-cols-3 bg-stone-200/60 p-1 rounded-lg text-center font-medium">
+          <div class="bg-white rounded py-1 shadow-sm">Properti</div>
+          <div class="py-1 text-stone-600">Kuantitas</div>
+          <div class="py-1 text-stone-600">Dokumen</div>
+        </div>
+
+        <div class="p-2.5 bg-white rounded-xl border border-stone-200">
+          <div class="font-bold text-stone-900">Basic Wall - 200mm</div>
+          <div class="text-[11px] text-stone-500">Wall • ID: <b>57632</b></div>
+        </div>
+
+        <div class="space-y-2 text-[11px]">
+          <div class="font-bold text-stone-800 border-b pb-1">Informasi Dasar</div>
+          <div class="flex justify-between items-center"><span>Nama</span><input value="Basic Wall - 200mm" class="border rounded px-2 py-1 w-36 bg-white" /></div>
+          <div class="flex justify-between items-center"><span>Tipe</span><input value="Basic Wall" class="border rounded px-2 py-1 w-36 bg-white" /></div>
+          <div class="flex justify-between items-center"><span>Level</span><input value="Level 1 - Ground Floor" class="border rounded px-2 py-1 w-36 bg-white" /></div>
+          <div class="flex justify-between items-center"><span>Top Constraint</span><input value="Level 2 - Lantai 2" class="border rounded px-2 py-1 w-36 bg-white" /></div>
+          <div class="flex justify-between items-center"><span>Unconnected Height</span><input value="3.000 m" class="border rounded px-2 py-1 w-36 bg-white" /></div>
+          <div class="flex justify-between items-center"><span>IFC Class</span><input value="IfcWallStandardCase" class="border rounded px-2 py-1 w-36 bg-white" /></div>
+        </div>
+
+        <div class="space-y-2 text-[11px]">
+          <div class="font-bold text-stone-800 border-b pb-1">Dimensi</div>
+          <div class="flex justify-between"><span>Panjang</span><b>5.200 m</b></div>
+          <div class="flex justify-between"><span>Tinggi</span><b>3.000 m</b></div>
+          <div class="flex justify-between"><span>Ketebalan</span><b>0.200 m</b></div>
+          <div class="flex justify-between"><span>Luas</span><b>15.600 m²</b></div>
+          <div class="flex justify-between"><span>Volume</span><b>3.120 m³</b></div>
+        </div>
+
+        <div class="space-y-2 text-[11px]">
+          <div class="font-bold text-stone-800 border-b pb-1">Material & Finishing</div>
+          <div class="flex justify-between"><span>Material</span><b>Beton Bertulang</b></div>
+          <div class="flex justify-between"><span>Finishing</span><b>Cat Dinding - Putih</b></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Status Bar -->
+    <footer class="mt-2 pt-2 border-t border-stone-300/80 flex justify-between text-[11px] text-stone-600">
+      <div>Project: <b>Mixed-Use Building - Sudirman</b> | File: <b>Sudirman_Tower_BIM.rvt</b> | <span class="text-emerald-700">● Disimpan otomatis 2 menit lalu</span></div>
+      <div>X: 12.456 &nbsp; Y: 8.732 &nbsp; Z: 0.000 m | Grid: 1.000 m | Snap: <b class="text-emerald-700">On</b> | Units: <b>Meters (m)</b></div>
+    </footer>
+  </main>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
